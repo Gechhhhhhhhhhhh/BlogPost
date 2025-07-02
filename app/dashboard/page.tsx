@@ -19,7 +19,7 @@ async function getData(userId: string) {
 export default async function DashboardPage() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
-  const data = await getData(user.id);
+  const data = await getData(user?.id);
   return (
     <div className="">
       <div className="flex items-center justify-between mb-6 mt-5">
